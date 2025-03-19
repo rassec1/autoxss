@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            width: 300px;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+        .status {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .active {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+        .inactive {
+            background-color: #ffebee;
+            color: #c62828;
+        }
+        button {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 4px;
+            background-color: #2196f3;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1976d2;
+        }
+    </style>
+</head>
+<body>
+    <h2>AutoFindXSS</h2>
+    <div id="status" class="status active">
+        Scanner is active
+    </div>
+    <button id="toggleScan">Toggle Scanner</button>
+    <button id="viewResults">View Results</button>
+    <script src="popup.js"></script>
+</body>
+</html> 

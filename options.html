@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AutoFindXSS 配置</title>
+    <style>
+        body {
+            width: 800px;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .section h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .domain-list {
+            margin: 10px 0;
+        }
+        .domain-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        .domain-item input[type="text"] {
+            flex: 1;
+            margin-right: 10px;
+            padding: 5px;
+        }
+        .domain-item button {
+            padding: 5px 10px;
+            background: #ff4444;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button {
+            padding: 8px 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        .checkbox-group {
+            margin: 10px 0;
+        }
+        .status-message {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            display: none;
+        }
+        .success {
+            background-color: #dff0d8;
+            color: #3c763d;
+            border: 1px solid #d6e9c6;
+        }
+        .error {
+            background-color: #f2dede;
+            color: #a94442;
+            border: 1px solid #ebccd1;
+        }
+        .webhook-input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <h2>扫描目标域名</h2>
+        <div id="scanTargets" class="domain-list"></div>
+        <button id="addScanTarget">添加扫描目标</button>
+        <div class="checkbox-group">
+            <label>
+                <input type="checkbox" id="scanTargetsEnabled">
+                启用扫描目标限制
+            </label>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>白名单域名</h2>
+        <div id="whitelist" class="domain-list"></div>
+        <button id="addWhitelist">添加白名单</button>
+        <div class="checkbox-group">
+            <label>
+                <input type="checkbox" id="whitelistEnabled">
+                启用白名单
+            </label>
+            <label>
+                <input type="checkbox" id="includeSubdomains">
+                包含子域名
+            </label>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>扫描选项</h2>
+        <div class="checkbox-group">
+            <label>
+                <input type="checkbox" id="scanParameters">
+                扫描URL参数
+            </label>
+        </div>
+        <div class="checkbox-group">
+            <label>
+                <input type="checkbox" id="scanHiddenInputs">
+                扫描隐藏输入框
+            </label>
+        </div>
+        <div class="checkbox-group">
+            <label>
+                <input type="checkbox" id="scanPseudoStatic">
+                扫描伪静态URL
+            </label>
+        </div>
+        <div class="checkbox-group">
+            <label>
+                <input type="checkbox" id="scanForms">
+                扫描表单
+            </label>
+        </div>
+        <div class="checkbox-group">
+            <label>
+                <input type="checkbox" id="scanLinks">
+                扫描页面链接
+            </label>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>飞书通知配置</h2>
+        <div class="checkbox-group">
+            <label>
+                <input type="checkbox" id="feishuEnabled">
+                启用飞书通知
+            </label>
+        </div>
+        <div>
+            <label for="feishuWebhook">Webhook URL:</label>
+            <input type="text" id="feishuWebhook" class="webhook-input" placeholder="请输入飞书 Webhook URL">
+        </div>
+    </div>
+
+    <button id="save">保存配置</button>
+    <div id="status" class="status-message"></div>
+
+    <script src="options.js"></script>
+</body>
+</html> 
