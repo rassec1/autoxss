@@ -104,6 +104,5 @@ FireAutoXSS 将复杂的漏洞研究过程集成于简洁的界面中，让每�
 </details>
 
 
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=rassec1/autoxss&type=Date)](https://www.star-history.com/#rassec1/autoxss&Date)
+## Stargazers over time
+[![Stargazers over time](https://starchart.cc/rassec1/autoxss.svg?variant=adaptive)](https://starchart.cc/rassec1/autoxss)
