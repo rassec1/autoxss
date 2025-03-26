@@ -99,12 +99,11 @@ FireAutoXSS 将复杂的漏洞研究过程集成于简洁的界面中，让每�
 - 确保配置了有效的飞书 Webhook 地址，否则无法接收漏洞报告
 
 ![image](https://github.com/user-attachments/assets/296f8d25-3c25-44fe-aee8-f9d0dcba0607)
+
+![image](https://github.com/user-attachments/assets/96e5a46f-5ac0-4a1d-b0ee-65ec29b20d51)
+</details>
+
+
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=rassec1/autoxss&type=Date)](https://www.star-history.com/#rassec1/autoxss&Date)
-
-
-![image](https://github.com/user-attachments/assets/96e5a46f-5ac0-4a1d-b0ee-65ec29b20d51)
-
-
-</details>
